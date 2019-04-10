@@ -47,12 +47,7 @@ def main():
     print("the following dashboards were modified locally:")
     for path, url in MANUAL_DASHBOARD_MAP.items():
         print("%s -> %s" % (url, path))
-    print('''To update, go to the current dashboard, click the "Arrow" button
-("Share dashboard") on top, click the `Export` tab, the `Export for
-sharing externally` button and `Save to file`. Then run the
-following command on the file:
-
-sed -i 's/${DS_[A-Z]*}/Prometheus/' FILENAME.json''')
+    print('''To update, see README.md''')
 
 
 if __name__ == '__main__':

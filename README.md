@@ -15,3 +15,59 @@ version of Prometheus and associated exporters.
 
 [grafana.com dashboard database]: https://grafana.com/dashboards/
 [Tor Project]: https://torproject.org/
+
+The point of this repository is to allow collaboration and welcome
+improvements so that the multiplication of dashboards on grafana.com
+stops somehow.
+
+Available dashboards
+--------------------
+
+| Dashboard                        | Status     | Changes                                            |
+| ---------                        | ------     | ----                                               |
+| [Apache][]                       | unchannged |                                                    |
+| [Bind][]                         | modified   | portability, legend, other fixes                   |
+| [Grafana][]                      | unchanged  |                                                    |
+| [Node exporter][]                | unchanged  |                                                    |
+| [Node exporter server metrics][] | unchanged  |                                                    |
+| [Postfix][]                      | new        | mostly new, based on a [custom dashboard][]        |
+| [Prometheus 2.0 overview][]      | modified   | modified to add disk usage and metrics scrape time |
+| [Smartmon textfile][]            | unchanged  |                                                    |
+
+ [Apache]: https://grafana.com/dashboards/3894/
+ [Bind]: https://grafana.com/dashboards/10024/
+ [Grafana]: https://grafana.com/dashboards/3590/
+ [Node exporter]: https://grafana.com/dashboards/1860/
+ [Node exporter server metrics]: https://grafana.com/dashboards/405/
+ [Postfix]: https://grafana.com/dashboards/10013/
+ [Smartmon textfile]: https://grafana.com/dashboards/3992/
+ [Prometheus 2.0overview]: https://grafana.com/dashboards/3662/
+[custom dashboard]: https://github.com/kumina/postfix_exporter/issues/21
+
+Updating dashboards
+-------------------
+
+Dashboards in this repository can be refreshed from a running Grafana
+instance by:
+
+ 1. clicking the "arrow" button (`Share dashboard`) on top
+ 2. choosing the `Export` tab
+ 3. setting the `Export for sharing externally` radio button
+ 4. hitting then `Save to file` button
+
+Then run the following command on the file to make it usable internally:
+
+    sed -i 's/${DS_[A-Z]*}/Prometheus/' FILENAME.json
+
+Then committed into git and pushed to this repository. Pull requests
+and issues are welcome.
+
+That is for "modified" or "new" dashboards above. For "unchanged"
+dashboards, they can be refreshed from the grafana.com database using
+the `refresh.py` script.
+
+This repository should be available at:
+
+<https://gitlab.com/anarcat/grafana-dashboards>
+
+But might be mirrored or forked elsewhere as well.
