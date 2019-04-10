@@ -1,0 +1,4 @@
+# requires this in ~/.gitconfig
+# [diff "json"]
+#    textconv = jq -S .
+*.json diff=json
