@@ -41,7 +41,7 @@ Available dashboards
  [Node exporter server metrics]: https://grafana.com/dashboards/405/
  [Postfix]: https://grafana.com/dashboards/10013/
  [Smartmon textfile]: https://grafana.com/dashboards/3992/
- [Prometheus 2.0overview]: https://grafana.com/dashboards/3662/
+ [Prometheus 2.0 overview]: https://grafana.com/dashboards/3662/
 [custom dashboard]: https://github.com/kumina/postfix_exporter/issues/21
 
 Updating dashboards
