@@ -31,7 +31,7 @@ Available dashboards
 | [Node exporter][]                | unchanged  |                                                    |
 | [Node exporter server metrics][] | unchanged  |                                                    |
 | [Postfix][]                      | new        | mostly new, based on a [custom dashboard][]        |
-| [Postgres][]                     | unchanged  |                                                    |
+| [Postgres][]                     | modified   | buffers formulas, qps graphsize, min/max for cache |
 | [Prometheus 2.0 overview][]      | modified   | modified to add disk usage and metrics scrape time |
 | [Smartmon textfile][]            | unchanged  |                                                    |
 
