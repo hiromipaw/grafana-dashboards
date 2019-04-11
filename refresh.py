@@ -26,6 +26,7 @@ AUTO_DASHBOARD_MAP = {
     'node-exporter-full.json': 'https://grafana.com/api/dashboards/1860/revisions/13/download',
     'node-exporter-server-metrics.json': 'https://grafana.com/api/dashboards/405/revisions/8/download',
     'postfix.json': 'https://grafana.com/api/dashboards/10013/revisions/2/download',
+    'postgresql.json': 'https://grafana.com/api/dashboards/455/revisions/2/download',
     'smartmon-textfile.json': 'https://grafana.com/api/dashboards/3992/revisions/1/download',
 }
 

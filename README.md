@@ -31,6 +31,7 @@ Available dashboards
 | [Node exporter][]                | unchanged  |                                                    |
 | [Node exporter server metrics][] | unchanged  |                                                    |
 | [Postfix][]                      | new        | mostly new, based on a [custom dashboard][]        |
+| [Postgres][]                     | unchanged  |                                                    |
 | [Prometheus 2.0 overview][]      | modified   | modified to add disk usage and metrics scrape time |
 | [Smartmon textfile][]            | unchanged  |                                                    |
 
@@ -40,6 +41,7 @@ Available dashboards
  [Node exporter]: https://grafana.com/dashboards/1860/
  [Node exporter server metrics]: https://grafana.com/dashboards/405/
  [Postfix]: https://grafana.com/dashboards/10013/
+ [Postgres]: https://grafana.com/dashboards/455
  [Smartmon textfile]: https://grafana.com/dashboards/3992/
  [Prometheus 2.0 overview]: https://grafana.com/dashboards/3662/
 [custom dashboard]: https://github.com/kumina/postfix_exporter/issues/21
