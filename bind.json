@@ -1873,7 +1873,7 @@
       }
     }
   ],
-  "schemaVersion": 18,
+  "schemaVersion": 19,
   "style": "dark",
   "tags": [
     "dns",
@@ -1938,5 +1938,5 @@
   "timezone": "browser",
   "title": "Bind DNS",
   "uid": "0Fo15GgWk",
-  "version": 1
+  "version": 6
 }
