@@ -70,7 +70,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1568986061804,
+  "iteration": 1568986061807,
   "links": [],
   "panels": [
     {
@@ -147,17 +147,17 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "avg(node_load1)",
+          "expr": "avg(node_load1{classes=~\"$class\"})",
           "legendFormat": "1-minute load",
           "refId": "A"
         },
         {
-          "expr": "avg(node_load5)",
+          "expr": "avg(node_load5{classes=~\"$class\"})",
           "legendFormat": "5-minute load",
           "refId": "B"
         },
         {
-          "expr": "avg(node_load15)",
+          "expr": "avg(node_load15{classes=~\"$class\"})",
           "legendFormat": "15-minute load",
           "refId": "C"
         }
@@ -267,28 +267,28 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(up!=1)",
+          "expr": "count(up{classes=~\"$class\"}!=1)",
           "hide": false,
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "A"
         },
         {
-          "expr": "count(up{job=\"apache\"})",
+          "expr": "count(up{classes=~\"$class\",job=\"apache\"})",
           "hide": true,
           "intervalFactor": 1,
           "legendFormat": "Webservers",
           "refId": "B"
         },
         {
-          "expr": "count(up{job=\"postfix\"})",
+          "expr": "count(up{classes=~\"$class\",job=\"postfix\"})",
           "hide": true,
           "intervalFactor": 1,
           "legendFormat": "Mail servers",
           "refId": "C"
         },
         {
-          "expr": "count(up{job=\"bind\"})",
+          "expr": "count(up{classes=~\"$class\",job=\"bind\"})",
           "hide": true,
           "intervalFactor": 1,
           "legendFormat": "Nameservers",
@@ -353,7 +353,7 @@
       "pluginVersion": "6.3.5",
       "targets": [
         {
-          "expr": "avg(node_load15)",
+          "expr": "avg(node_load15{classes=~\"$class\"})",
           "refId": "A"
         }
       ],
@@ -429,7 +429,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(rate(apache_accesses_total[30d]))",
+          "expr": "sum(rate(apache_accesses_total{classes=~\"$class\"}[30d]))",
           "legendFormat": "WTH",
           "refId": "A"
         }
@@ -512,7 +512,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(node_reboot_required)",
+          "expr": "sum(node_reboot_required{classes=~\"$class\"})",
           "legendFormat": "",
           "refId": "A"
         }
@@ -595,7 +595,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(apt_upgrades_pending)",
+          "expr": "sum(apt_upgrades_pending{classes=~\"$class\"})",
           "legendFormat": "",
           "refId": "A"
         }
@@ -659,7 +659,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(apache_accesses_total[5m]))",
+          "expr": "sum(rate(apache_accesses_total{classes=~\"$class\"}[5m]))",
           "legendFormat": "Apache hit rate",
           "refId": "A"
         }
@@ -770,7 +770,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(node_memory_MemTotal_bytes)",
+          "expr": "sum(node_memory_MemTotal_bytes{classes=~\"$class\"})",
           "legendFormat": "Total  memory",
           "refId": "B"
         }
@@ -853,7 +853,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(node_cpu_seconds_total{mode=\"system\"}) + count(node_cpu{mode=\"system\"})",
+          "expr": "count(node_cpu_seconds_total{classes=~\"$class\",mode=\"system\"}) + count(node_cpu{classes=~\"$class\",mode=\"system\"})",
           "legendFormat": "Number of cores",
           "refId": "A"
         }
@@ -923,28 +923,28 @@
       ],
       "targets": [
         {
-          "expr": "count(up) by (job)",
+          "expr": "count(up{classes=~\"$class\"}) by (job)",
           "hide": false,
           "intervalFactor": 1,
           "legendFormat": "{{job}}",
           "refId": "A"
         },
         {
-          "expr": "sum(apache_up)",
+          "expr": "sum(apache_up{classes=~\"$class\"})",
           "hide": true,
           "intervalFactor": 1,
           "legendFormat": "Webservers",
           "refId": "B"
         },
         {
-          "expr": "sum(postfix_up)",
+          "expr": "sum(postfix_up{classes=~\"$class\"})",
           "hide": true,
           "intervalFactor": 1,
           "legendFormat": "Mail servers",
           "refId": "C"
         },
         {
-          "expr": "sum(bind_up)",
+          "expr": "sum(bind_up{classes=~\"$class\"})",
           "hide": true,
           "intervalFactor": 1,
           "legendFormat": "Nameservers",
@@ -1010,12 +1010,12 @@
       ],
       "targets": [
         {
-          "expr": "sum(node_memory_MemFree_bytes)",
+          "expr": "sum(node_memory_MemFree_bytes{classes=~\"$class\"})",
           "legendFormat": "Free memory",
           "refId": "A"
         },
         {
-          "expr": "sum(node_memory_MemTotal_bytes)",
+          "expr": "sum(node_memory_MemTotal_bytes{classes=~\"$class\"})",
           "legendFormat": "Total  memory",
           "refId": "B"
         }
@@ -1067,12 +1067,12 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(node_network_transmit_bytes_total[5m]))",
+          "expr": "sum(rate(node_network_transmit_bytes_total{classes=~\"$class\"}[5m]))",
           "legendFormat": "Transmit rate",
           "refId": "A"
         },
         {
-          "expr": "sum(rate(node_network_receive_bytes_total[5m]))",
+          "expr": "sum(rate(node_network_receive_bytes_total{classes=~\"$class\"}[5m]))",
           "legendFormat": "Receive rate",
           "refId": "B"
         }
@@ -1169,12 +1169,12 @@
       ],
       "targets": [
         {
-          "expr": "sum(rate(node_network_transmit_bytes_total[5m]))",
+          "expr": "sum(rate(node_network_transmit_bytes_total{classes=~\"$class\"}[5m]))",
           "legendFormat": "Transmit rate",
           "refId": "A"
         },
         {
-          "expr": "sum(rate(node_network_receive_bytes_total[5m]))",
+          "expr": "sum(rate(node_network_receive_bytes_total{classes=~\"$class\"}[5m]))",
           "legendFormat": "Receive rate",
           "refId": "B"
         }
@@ -1227,7 +1227,7 @@
       "steppedLine": true,
       "targets": [
         {
-          "expr": "sum(node_reboot_required)",
+          "expr": "sum(node_reboot_required{classes=~\"$class\"})",
           "legendFormat": "hosts requiring a reboot",
           "refId": "A"
         }
@@ -1316,12 +1316,12 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(node_memory_MemFree_bytes)",
+          "expr": "sum(node_memory_MemFree_bytes{classes=~\"$class\"})",
           "legendFormat": "Free memory",
           "refId": "A"
         },
         {
-          "expr": "sum(node_memory_MemTotal_bytes)",
+          "expr": "sum(node_memory_MemTotal_bytes{classes=~\"$class\"})",
           "legendFormat": "Total  memory",
           "refId": "B"
         }
@@ -1414,12 +1414,12 @@
       "steppedLine": true,
       "targets": [
         {
-          "expr": "sum(apt_upgrades_pending)",
+          "expr": "sum(apt_upgrades_pending{classes=~\"$class\"})",
           "legendFormat": "Total number of packages needing upgrading",
           "refId": "A"
         },
         {
-          "expr": "count(apt_upgrades_pending>0)",
+          "expr": "count(apt_upgrades_pending{classes=~\"$class\"}>0)",
           "legendFormat": "Hosts requiring upgrades",
           "refId": "B"
         }
@@ -1508,28 +1508,28 @@
       "steppedLine": true,
       "targets": [
         {
-          "expr": "count(up) by (job)",
+          "expr": "count(up{classes=~\"$class\"}) by (job)",
           "hide": false,
           "intervalFactor": 1,
           "legendFormat": "{{job}}",
           "refId": "A"
         },
         {
-          "expr": "count(up{job=\"apache\"})",
+          "expr": "count(up{classes=~\"$class\",job=\"apache\"})",
           "hide": true,
           "intervalFactor": 1,
           "legendFormat": "Webservers",
           "refId": "B"
         },
         {
-          "expr": "count(up{job=\"postfix\"})",
+          "expr": "count(up{classes=~\"$class\",job=\"postfix\"})",
           "hide": true,
           "intervalFactor": 1,
           "legendFormat": "Mail servers",
           "refId": "C"
         },
         {
-          "expr": "count(up{job=\"bind\"})",
+          "expr": "count(up{classes=~\"$class\",job=\"bind\"})",
           "hide": true,
           "intervalFactor": 1,
           "legendFormat": "Nameservers",
@@ -1618,28 +1618,28 @@
       "steppedLine": true,
       "targets": [
         {
-          "expr": "count(up!=1) by (job)",
+          "expr": "count(up{classes=~\"$class\"}!=1) by (job)",
           "hide": false,
           "intervalFactor": 1,
           "legendFormat": "{{job}}",
           "refId": "A"
         },
         {
-          "expr": "count(up{job=\"apache\"})",
+          "expr": "count(up{classes=~\"$class\",job=\"apache\"})",
           "hide": true,
           "intervalFactor": 1,
           "legendFormat": "Webservers",
           "refId": "B"
         },
         {
-          "expr": "count(up{job=\"postfix\"})",
+          "expr": "count(up{classes=~\"$class\",job=\"postfix\"})",
           "hide": true,
           "intervalFactor": 1,
           "legendFormat": "Mail servers",
           "refId": "C"
         },
         {
-          "expr": "count(up{job=\"bind\"})",
+          "expr": "count(up{classes=~\"$class\",job=\"bind\"})",
           "hide": true,
           "intervalFactor": 1,
           "legendFormat": "Nameservers",
@@ -1702,7 +1702,30 @@
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "allValue": null,
+        "current": {},
+        "datasource": "${DS_PROMETHEUS}",
+        "definition": "label_values(node_exporter_build_info, classes)",
+        "hide": 0,
+        "includeAll": true,
+        "label": null,
+        "multi": true,
+        "name": "class",
+        "options": [],
+        "query": "label_values(node_exporter_build_info, classes)",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
   },
   "time": {
     "from": "now-1h",
