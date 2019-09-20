@@ -908,7 +908,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(bind_incoming_queries_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_incoming_queries_total{instance=~\"$node:.*\"}[120s])",
           "intervalFactor": 2,
           "legendFormat": "{{ type }}",
           "refId": "A",
@@ -937,7 +937,7 @@
       "yaxes": [
         {
           "format": "short",
-          "label": null,
+          "label": "qps",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1000,7 +1000,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(bind_incoming_requests_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_incoming_requests_total{instance=~\"$node:.*\"}[120s])",
           "intervalFactor": 2,
           "legendFormat": "{{ opcode }}",
           "refId": "A",
@@ -1029,7 +1029,7 @@
       "yaxes": [
         {
           "format": "short",
-          "label": null,
+          "label": "ops",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1092,7 +1092,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(bind_responses_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_responses_total{instance=~\"$node:.*\"}[120s])",
           "intervalFactor": 2,
           "legendFormat": "{{ result }}",
           "refId": "A",
@@ -1121,7 +1121,7 @@
       "yaxes": [
         {
           "format": "short",
-          "label": null,
+          "label": "qps",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1196,7 +1196,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(bind_query_duplicates_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_query_duplicates_total{instance=~\"$node:.*\"}[120s])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "Duplicates",
@@ -1244,7 +1244,7 @@
       "yaxes": [
         {
           "format": "short",
-          "label": null,
+          "label": "qps",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1410,7 +1410,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(bind_resolver_dnssec_validation_errors_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_resolver_dnssec_validation_errors_total{instance=~\"$node:.*\"}[120s])",
           "intervalFactor": 2,
           "legendFormat": "{{ view }} / ValErr",
           "refId": "A",
@@ -1418,7 +1418,7 @@
           "target": ""
         },
         {
-          "expr": "increase(bind_resolver_dnssec_validation_success_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_resolver_dnssec_validation_success_total{instance=~\"$node:.*\"}[120s])",
           "intervalFactor": 2,
           "legendFormat": "{{ view }} / {{ result }}",
           "refId": "B",
@@ -1447,7 +1447,7 @@
       "yaxes": [
         {
           "format": "short",
-          "label": null,
+          "label": "qps",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1508,7 +1508,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(bind_incoming_queries_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_incoming_queries_total{instance=~\"$node:.*\"}[120s])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{ view }} / {{ type }}",
@@ -1538,7 +1538,7 @@
       "yaxes": [
         {
           "format": "short",
-          "label": null,
+          "label": "qps",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1599,7 +1599,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(bind_resolver_query_errors_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_resolver_query_errors_total{instance=~\"$node:.*\"}[120s])",
           "intervalFactor": 2,
           "legendFormat": "{{ view }} / {{ error }}",
           "refId": "A",
@@ -1607,7 +1607,7 @@
           "target": ""
         },
         {
-          "expr": "increase(bind_resolver_query_edns0_errors_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_resolver_query_edns0_errors_total{instance=~\"$node:.*\"}[120s])",
           "intervalFactor": 2,
           "legendFormat": "{{ view }} / EDNS0",
           "refId": "B",
@@ -1615,7 +1615,7 @@
           "target": ""
         },
         {
-          "expr": "increase(bind_resolver_query_retries_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_resolver_query_retries_total{instance=~\"$node:.*\"}[120s])",
           "intervalFactor": 2,
           "legendFormat": "{{ view }} / Retry",
           "refId": "C",
@@ -1644,7 +1644,7 @@
       "yaxes": [
         {
           "format": "short",
-          "label": null,
+          "label": "qps",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1705,7 +1705,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(bind_resolver_query_duration_seconds_bucket{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_resolver_query_duration_seconds_bucket{instance=~\"$node:.*\"}[120s])",
           "intervalFactor": 2,
           "legendFormat": "{{ view }} / {{ le }}",
           "refId": "A",
@@ -1734,7 +1734,7 @@
       "yaxes": [
         {
           "format": "short",
-          "label": null,
+          "label": "qps",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1795,7 +1795,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(bind_resolver_response_errors_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_resolver_response_errors_total{instance=~\"$node:.*\"}[120s])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{ view }} / {{ error }}",
@@ -1804,7 +1804,7 @@
           "target": ""
         },
         {
-          "expr": "increase(bind_resolver_response_lame_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_resolver_response_lame_total{instance=~\"$node:.*\"}[120s])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{ view }} / LAME",
@@ -1813,7 +1813,7 @@
           "target": ""
         },
         {
-          "expr": "increase(bind_resolver_response_mismatch_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_resolver_response_mismatch_total{instance=~\"$node:.*\"}[120s])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{ view }} / MISMATCH",
@@ -1822,7 +1822,7 @@
           "target": ""
         },
         {
-          "expr": "increase(bind_resolver_response_truncated_total{instance=~\"$node:.*\"}[120s])",
+          "expr": "rate(bind_resolver_response_truncated_total{instance=~\"$node:.*\"}[120s])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{ view }} / TRUNCATED",
@@ -1852,7 +1852,7 @@
       "yaxes": [
         {
           "format": "short",
-          "label": null,
+          "label": "qps",
           "logBase": 1,
           "max": null,
           "min": null,
