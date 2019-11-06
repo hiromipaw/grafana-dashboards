@@ -70,7 +70,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1568986746194,
+  "iteration": 1573071138496,
   "links": [],
   "panels": [
     {
@@ -269,6 +269,7 @@
         {
           "expr": "count(up{classes=~\"$class\"}!=1)",
           "hide": false,
+          "instant": true,
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "A"
@@ -350,10 +351,11 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "6.3.5",
+      "pluginVersion": "6.4.4",
       "targets": [
         {
           "expr": "avg(node_load15{classes=~\"$class\"})",
+          "instant": true,
           "refId": "A"
         }
       ],
@@ -430,6 +432,7 @@
       "targets": [
         {
           "expr": "sum(rate(apache_accesses_total{classes=~\"$class\"}[30d]))",
+          "instant": true,
           "legendFormat": "WTH",
           "refId": "A"
         }
@@ -513,6 +516,7 @@
       "targets": [
         {
           "expr": "sum(node_reboot_required{classes=~\"$class\"})",
+          "instant": true,
           "legendFormat": "",
           "refId": "A"
         }
@@ -596,6 +600,7 @@
       "targets": [
         {
           "expr": "sum(apt_upgrades_pending{classes=~\"$class\"})",
+          "instant": true,
           "legendFormat": "",
           "refId": "A"
         }
@@ -771,6 +776,7 @@
       "targets": [
         {
           "expr": "sum(node_memory_MemTotal_bytes{classes=~\"$class\"})",
+          "instant": true,
           "legendFormat": "Total  memory",
           "refId": "B"
         }
@@ -854,6 +860,7 @@
       "targets": [
         {
           "expr": "count(node_cpu_seconds_total{classes=~\"$class\",mode=\"system\"}) + count(node_cpu{classes=~\"$class\",mode=\"system\"})",
+          "instant": true,
           "legendFormat": "Number of cores",
           "refId": "A"
         }
@@ -1620,6 +1627,7 @@
         {
           "expr": "count(up{classes=~\"$class\"}!=1) by (job)",
           "hide": false,
+          "instant": false,
           "intervalFactor": 1,
           "legendFormat": "{{job}}",
           "refId": "A"
@@ -1698,7 +1706,7 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 19,
+  "schemaVersion": 20,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1748,5 +1756,5 @@
   "timezone": "",
   "title": "TPO overview",
   "uid": "wUmZB05Zk",
-  "version": 23
+  "version": 24
 }
