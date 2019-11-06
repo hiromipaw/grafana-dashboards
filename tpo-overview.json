@@ -70,7 +70,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1568986061807,
+  "iteration": 1568986746194,
   "links": [],
   "panels": [
     {
@@ -304,7 +304,7 @@
       "valueMaps": [
         {
           "op": "=",
-          "text": "N/A",
+          "text": "0",
           "value": "null"
         }
       ],
@@ -443,7 +443,7 @@
       "valueMaps": [
         {
           "op": "=",
-          "text": "N/A",
+          "text": "0",
           "value": "null"
         }
       ],
@@ -1604,7 +1604,7 @@
       },
       "lines": true,
       "linewidth": 1,
-      "nullPointMode": "null",
+      "nullPointMode": "null as zero",
       "options": {
         "dataLinks": []
       },
@@ -1748,5 +1748,5 @@
   "timezone": "",
   "title": "TPO overview",
   "uid": "wUmZB05Zk",
-  "version": 22
+  "version": 23
 }
