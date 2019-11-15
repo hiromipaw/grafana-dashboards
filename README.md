@@ -27,6 +27,7 @@ Available dashboards
 | ---------                        | ------     | ----                                               |
 | [Apache][]                       | unchannged |                                                    |
 | [Bind][]                         | modified   | portability, legend, rate, other fixes             |
+| Cache Health                     | new        | |
 | [Grafana][]                      | unchanged  |                                                    |
 | [Node exporter][]                | unchanged  |                                                    |
 | [Node exporter server metrics][] | unchanged  |                                                    |
