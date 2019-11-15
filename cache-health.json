@@ -621,7 +621,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "( node_memory_MemTotal_bytes{alias=~'$alias.*'} - node_memory_MemFree_bytes{alias=~'$alias.*'} - node_memory_Buffers_bytes{instance=~'$node'} - node_memory_Cached_bytes{instance=~'$node'} - node_memory_SwapCached_bytes{instance=~'$node'} - node_memory_Slab_bytes{instance=~'$node'} - node_memory_PageTables_bytes{instance=~'$node'} - node_memory_VmallocUsed_bytes{instance=~'$node'} ) or ( node_memory_MemTotal{instance=~'$node'} - node_memory_MemFree{instance=~'$node'} - node_memory_Buffers{instance=~'$node'} - node_memory_Cached{instance=~'$node'} - node_memory_SwapCached{instance=~'$node'} - node_memory_Slab{instance=~'$node'} - node_memory_PageTables{instance=~'$node'} - node_memory_VmallocUsed{instance=~'$node'} )",
+          "expr": "( node_memory_MemTotal_bytes{alias=~'$alias.*'} - node_memory_MemFree_bytes{alias=~'$alias.*'} - node_memory_Buffers_bytes{alias=~'$alias.*'} - node_memory_Cached_bytes{alias=~'$alias.*'} - node_memory_SwapCached_bytes{alias=~'$alias.*'} - node_memory_Slab_bytes{alias=~'$alias.*'} - node_memory_PageTables_bytes{alias=~'$alias.*'} - node_memory_VmallocUsed_bytes{alias=~'$alias.*'} ) or ( node_memory_MemTotal{alias=~'$alias.*'} - node_memory_MemFree{alias=~'$alias.*'} - node_memory_Buffers{alias=~'$alias.*'} - node_memory_Cached{alias=~'$alias.*'} - node_memory_SwapCached{alias=~'$alias.*'} - node_memory_Slab{alias=~'$alias.*'} - node_memory_PageTables{alias=~'$alias.*'} - node_memory_VmallocUsed{alias=~'$alias.*'} )",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "Apps",
@@ -631,7 +631,7 @@
           "target": ""
         },
         {
-          "expr": "node_memory_Buffers_bytes{instance=~'$node'} or node_memory_Buffers{instance=~'$node'}",
+          "expr": "node_memory_Buffers_bytes{alias=~'$alias.*'} or node_memory_Buffers{alias=~'$alias.*'}",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "Buffers",
@@ -639,7 +639,7 @@
           "step": 1200
         },
         {
-          "expr": "node_memory_Cached_bytes{instance=~'$node'} or node_memory_Cached{instance=~'$node'}",
+          "expr": "node_memory_Cached_bytes{alias=~'$alias.*'} or node_memory_Cached{alias=~'$alias.*'}",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "Cached",
@@ -647,7 +647,7 @@
           "step": 1200
         },
         {
-          "expr": "node_memory_MemFree_bytes{instance=~'$node'} or node_memory_MemFree{instance=~'$node'}",
+          "expr": "node_memory_MemFree_bytes{alias=~'$alias.*'} or node_memory_MemFree{alias=~'$alias.*'}",
           "hide": false,
           "interval": "",
           "intervalFactor": 2,
@@ -656,7 +656,7 @@
           "step": 1200
         },
         {
-          "expr": "node_memory_Slab_bytes{instance=~'$node'} or node_memory_Slab{instance=~'$node'}",
+          "expr": "node_memory_Slab_bytes{alias=~'$alias.*'} or node_memory_Slab{alias=~'$alias.*'}",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "Slab",
@@ -664,7 +664,7 @@
           "step": 1200
         },
         {
-          "expr": "node_memory_SwapCached_bytes{instance=~'$node'} or node_memory_SwapCached{instance=~'$node'}",
+          "expr": "node_memory_SwapCached_bytes{alias=~'$alias.*'} or node_memory_SwapCached{alias=~'$alias.*'}",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "SwapCached",
@@ -672,7 +672,7 @@
           "step": 1200
         },
         {
-          "expr": "node_memory_PageTables_bytes{instance=~'$node'} or node_memory_PageTables{instance=~'$node'}",
+          "expr": "node_memory_PageTables_bytes{alias=~'$alias.*'} or node_memory_PageTables{alias=~'$alias.*'}",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "PageTables",
@@ -680,7 +680,7 @@
           "step": 1200
         },
         {
-          "expr": "node_memory_VmallocUsed_bytes{instance=~'$node'} or node_memory_VmallocUsed{instance=~'$node'}",
+          "expr": "node_memory_VmallocUsed_bytes{alias=~'$alias.*'} or node_memory_VmallocUsed{alias=~'$alias.*'}",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "VmallocUsed",
@@ -689,7 +689,7 @@
           "step": 1200
         },
         {
-          "expr": "(node_memory_SwapTotal_bytes{instance=~'$node'} - node_memory_SwapFree{instance=~'$node'}) or (node_memory_SwapTotal{instance=~'$node'} - node_memory_SwapFree{instance=~'$node'})",
+          "expr": "(node_memory_SwapTotal_bytes{alias=~'$alias.*'} - node_memory_SwapFree{alias=~'$alias.*'}) or (node_memory_SwapTotal{alias=~'$alias.*'} - node_memory_SwapFree{alias=~'$alias.*'})",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "Swap",
@@ -698,7 +698,7 @@
           "step": 1200
         },
         {
-          "expr": "node_memory_Committed_AS_bytes{instance=~'$node'} or node_memory_Committed_AS{instance=~'$node'}",
+          "expr": "node_memory_Committed_AS_bytes{alias=~'$alias.*'} or node_memory_Committed_AS{alias=~'$alias.*'}",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "Committed",
@@ -707,7 +707,7 @@
           "step": 1200
         },
         {
-          "expr": "node_memory_Mapped_bytes{instance=~'$node'} or node_memory_Mapped{instance=~'$node'}",
+          "expr": "node_memory_Mapped_bytes{alias=~'$alias.*'} or node_memory_Mapped{alias=~'$alias.*'}",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "Mapped",
@@ -715,7 +715,7 @@
           "step": 1200
         },
         {
-          "expr": "node_memory_Active_bytes{instance=~'$node'} or node_memory_Active{instance=~'$node'}",
+          "expr": "node_memory_Active_bytes{alias=~'$alias.*'} or node_memory_Active{alias=~'$alias.*'}",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "Active",
@@ -724,7 +724,7 @@
           "step": 1200
         },
         {
-          "expr": "node_memory_Inactive_bytes{instance=~'$node'} or node_memory_Inactive{instance=~'$node'}",
+          "expr": "node_memory_Inactive_bytes{alias=~'$alias.*'} or node_memory_Inactive{alias=~'$alias.*'}",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "Inactive",
