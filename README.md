@@ -27,7 +27,7 @@ Available dashboards
 | ---------                        | ------     | ----                                               |
 | [Apache][]                       | unchannged |                                                    |
 | [Bind][]                         | modified   | portability, legend, rate, other fixes             |
-| Cache Health                     | new        | |
+| [Cache Health][]                 | new        | |
 | [Grafana][]                      | unchanged  |                                                    |
 | [Node exporter][]                | unchanged  |                                                    |
 | [Node exporter server metrics][] | unchanged  |                                                    |
@@ -38,6 +38,7 @@ Available dashboards
 
  [Apache]: https://grafana.com/dashboards/3894/
  [Bind]: https://grafana.com/dashboards/10024/
+ [Cache Health]: https://grafana.com/grafana/dashboards/11203
  [Grafana]: https://grafana.com/dashboards/3590/
  [Node exporter]: https://grafana.com/dashboards/1860/
  [Node exporter server metrics]: https://grafana.com/dashboards/405/
