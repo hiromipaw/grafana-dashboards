@@ -46,7 +46,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1573920196003,
+  "iteration": 1573920356096,
   "links": [],
   "panels": [
     {
@@ -59,7 +59,7 @@
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 10,
+        "h": 8,
         "w": 12,
         "x": 0,
         "y": 0
@@ -106,7 +106,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Current total apache accesses",
+      "title": "Request rate on $alias",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -152,10 +152,10 @@
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 9,
+        "h": 7,
         "w": 12,
         "x": 0,
-        "y": 10
+        "y": 8
       },
       "id": 2,
       "legend": {
@@ -196,7 +196,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "$alias hit ratio",
+      "title": "Hit ratio on $alias",
       "tooltip": {
         "shared": false,
         "sort": 1,
@@ -245,7 +245,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 19
+        "y": 15
       },
       "id": 15,
       "legend": {
@@ -303,7 +303,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Request latency",
+      "title": "Request latency on $alias",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -356,7 +356,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 27
+        "y": 23
       },
       "id": 5,
       "legend": {
@@ -402,7 +402,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Disk Space Used",
+      "title": "Disk Space Used on $alias",
       "tooltip": {
         "msResolution": true,
         "shared": true,
@@ -453,7 +453,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 34
+        "y": 30
       },
       "id": 9,
       "legend": {
@@ -512,7 +512,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Network Traffic",
+      "title": "Network Traffic on $alias",
       "tooltip": {
         "msResolution": false,
         "shared": true,
@@ -564,7 +564,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 41
+        "y": 37
       },
       "id": 7,
       "legend": {
@@ -630,7 +630,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Load",
+      "title": "Load on $alias",
       "tooltip": {
         "msResolution": false,
         "shared": true,
@@ -685,7 +685,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 48
+        "y": 44
       },
       "id": 11,
       "legend": {
@@ -844,7 +844,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Memory",
+      "title": "Memory on $alias",
       "tooltip": {
         "msResolution": false,
         "shared": true,
@@ -913,7 +913,7 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-7d",
     "to": "now"
   },
   "timepicker": {
@@ -933,5 +933,5 @@
   "timezone": "",
   "title": "Cache health",
   "uid": "p21-cvJWk",
-  "version": 15
+  "version": 16
 }
