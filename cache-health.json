@@ -46,7 +46,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1573920356096,
+  "iteration": 1573921004363,
   "links": [],
   "panels": [
     {
@@ -277,7 +277,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "histogram_quantile(0.5, sum(rate(nginx_http_request_time_bucket{alias=~\"^$alias.*\"}[5m])) by (vhost,le))",
+          "expr": "histogram_quantile(0.5, sum(rate(nginx_http_request_time_seconds_bucket{alias=~\"^$alias.*\"}[5m])) by (vhost,le))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -285,14 +285,14 @@
           "refId": "A"
         },
         {
-          "expr": "histogram_quantile(0.9, sum(rate(nginx_http_request_time_bucket{alias=~\"^$alias.*\"}[5m])) by (vhost,le))",
+          "expr": "histogram_quantile(0.9, sum(rate(nginx_http_request_time_seconds_bucket{alias=~\"^$alias.*\"}[5m])) by (vhost,le))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{vhost}}/90pct",
           "refId": "B"
         },
         {
-          "expr": "histogram_quantile(0.99, sum(rate(nginx_http_request_time_bucket{alias=~\"^$alias.*\"}[5m])) by (vhost,le))",
+          "expr": "histogram_quantile(0.99, sum(rate(nginx_http_request_time_seconds_bucket{alias=~\"^$alias.*\"}[5m])) by (vhost,le))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{vhost}}/99pct",
@@ -319,7 +319,7 @@
       },
       "yaxes": [
         {
-          "format": "ms",
+          "format": "s",
           "label": null,
           "logBase": 10,
           "max": null,
@@ -327,7 +327,7 @@
           "show": true
         },
         {
-          "format": "ms",
+          "format": "s",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -933,5 +933,5 @@
   "timezone": "",
   "title": "Cache health",
   "uid": "p21-cvJWk",
-  "version": 16
+  "version": 17
 }
