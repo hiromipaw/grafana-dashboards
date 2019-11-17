@@ -46,7 +46,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1573921004363,
+  "iteration": 1573950096590,
   "links": [],
   "panels": [
     {
@@ -246,6 +246,113 @@
         "w": 12,
         "x": 0,
         "y": 15
+      },
+      "id": 23,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": "alias",
+      "repeatDirection": "h",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.5, sum(rate(nginx_http_request_time_seconds_bucket{upstream_cache_status=\"HIT\",alias=~\"^$alias.*\"}[5m])) by (vhost,le))",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{vhost}}/50pct",
+          "refId": "A"
+        },
+        {
+          "expr": "histogram_quantile(0.9, sum(rate(nginx_http_request_time_seconds_bucket{upstream_cache_status=\"HIT\",alias=~\"^$alias.*\"}[5m])) by (vhost,le))",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "{{vhost}}/90pct",
+          "refId": "B"
+        },
+        {
+          "expr": "histogram_quantile(0.99, sum(rate(nginx_http_request_time_seconds_bucket{upstream_cache_status=\"HIT\",alias=~\"^$alias.*\"}[5m])) by (vhost,le))",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "{{vhost}}/99pct",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Request latency (hits)  on $alias",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "s",
+          "label": null,
+          "logBase": 10,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "s",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_PROMETHEUS}",
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 22
       },
       "id": 15,
       "legend": {
@@ -933,5 +1040,5 @@
   "timezone": "",
   "title": "Cache health",
   "uid": "p21-cvJWk",
-  "version": 17
+  "version": 18
 }
