@@ -94,7 +94,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(nginx_http_request_total{alias=~\"$alias.*\"}[5m])",
+          "expr": "rate(nginx_http_request_details_total{upstream_cache_status=~\"$cache_status\",alias=~\"$alias.*\"}[5m])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "Accesses",
@@ -187,7 +187,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "nginx_http_request_cache_total{alias=~\"$alias\"}",
+          "expr": "nginx_http_request_details_total{alias=~\"$alias\"}",
           "legendFormat": "{{upstream_cache_status}}",
           "refId": "A"
         }
