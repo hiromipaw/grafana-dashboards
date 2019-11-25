@@ -46,7 +46,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1573950096616,
+  "iteration": 1574692858004,
   "links": [],
   "panels": [
     {
@@ -59,7 +59,7 @@
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 8,
+        "h": 6,
         "w": 12,
         "x": 0,
         "y": 0
@@ -155,7 +155,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 8
+        "y": 6
       },
       "id": 2,
       "legend": {
@@ -245,7 +245,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 15
+        "y": 13
       },
       "id": 23,
       "legend": {
@@ -356,7 +356,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 23
+        "y": 21
       },
       "id": 5,
       "legend": {
@@ -453,7 +453,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 30
+        "y": 28
       },
       "id": 9,
       "legend": {
@@ -564,7 +564,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 37
+        "y": 35
       },
       "id": 7,
       "legend": {
@@ -685,7 +685,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 44
+        "y": 42
       },
       "id": 11,
       "legend": {
@@ -892,14 +892,14 @@
         "allValue": null,
         "current": {},
         "datasource": "${DS_PROMETHEUS}",
-        "definition": "label_values(nginx_http_request_cache_total, alias)",
+        "definition": "label_values(nginx_http_request_details_total, alias)",
         "hide": 0,
         "includeAll": true,
         "label": null,
         "multi": true,
         "name": "alias",
         "options": [],
-        "query": "label_values(nginx_http_request_cache_total, alias)",
+        "query": "label_values(nginx_http_request_details_total, alias)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -955,5 +955,5 @@
   "timezone": "",
   "title": "Cache health",
   "uid": "p21-cvJWk",
-  "version": 18
+  "version": 20
 }
