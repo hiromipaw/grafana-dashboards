@@ -26,6 +26,7 @@ Available dashboards
 | Dashboard                        | Status     | Changes                                            |
 | ---------                        | ------     | ----                                               |
 | [Apache][]                       | unchannged |                                                    |
+| [Blackbox exporter][]            | modified   | removed bits about dns probing                     |
 | [Bind][]                         | modified   | portability, legend, rate, other fixes             |
 | [Cache Health][]                 | new        | |
 | [Grafana][]                      | unchanged  |                                                    |
@@ -38,6 +39,7 @@ Available dashboards
 
  [Apache]: https://grafana.com/dashboards/3894/
  [Bind]: https://grafana.com/dashboards/10024/
+ [Blackbox exporter]: https://grafana.com/grafana/dashboards/9719
  [Cache Health]: https://grafana.com/grafana/dashboards/11203
  [Grafana]: https://grafana.com/dashboards/3590/
  [Node exporter]: https://grafana.com/dashboards/1860/
